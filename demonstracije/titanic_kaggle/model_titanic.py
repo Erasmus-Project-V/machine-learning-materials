@@ -14,7 +14,6 @@ print(df.iloc[1, :])
 X = df.iloc[:, 2:].values
 y = df.iloc[:, 1].values
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, stratify=y, shuffle=True, test_size=0.2)
 
 
 def asses_f_i():
@@ -108,6 +107,7 @@ ax[2].bar(spacing,np.asarray(list(avg_tt.values())).round(4)*1000*(100/71),color
 ax[2].bar(spacing+0.5,np.asarray(list(avg_tt_std.values())).round(4)*1000*(100/71),color="y",edgecolor="k",width=0.5,label="std")
 ax[2].set_xticks(spacing+0.5/2,avg_tt.keys())
 ax[2].legend(loc="upper left")
+
 
 
 fig.show()
